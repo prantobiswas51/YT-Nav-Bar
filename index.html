@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/779220d86d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+
+            <div class="logo"><a href="">Techland360</a></div>
+
+            <ul class="links">
+                <li><a href="">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+
+            <div class="toggle_btn" id="toggle_btn">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </div>
+
+            <ul class="dropdown_menu" id="dropdown_menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+
+    <script>
+        var toggle_btn = document.getElementById('toggle_btn')
+
+        toggle_btn.onclick = function(){
+            var dropdown_menu = document.getElementById('dropdown_menu')
+
+            if(dropdown_menu.style.display == "block"){
+                dropdown_menu.style.display = "none"
+                toggle_btn.innerHTML = '<i class="fa-solid fa-bars fa-xl"></i>'
+            }else{
+                dropdown_menu.style.display = "block"
+                toggle_btn.innerHTML = '<i class="fa-sharp fa-solid fa-xmark fa-xl"></i>'
+            }
+        }
+
+    </script>
+</body>
+</html>
